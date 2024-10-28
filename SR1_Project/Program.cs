@@ -14,7 +14,7 @@ namespace SR1_Project
             Player player = new Player("ロト", 1);
 
             Console.WriteLine("名前 : {0}",player.GetName());
-            Console.WriteLine("名前 : {0}", player.GetLevel());
+            Console.WriteLine("レベル : {0}", player.GetLevel());
 
             player.Attck();
             player.Defense();
