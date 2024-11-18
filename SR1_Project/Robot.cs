@@ -8,30 +8,39 @@ namespace SR1_Project
 {
     internal class Robot
     {
-        protected string name = "";
-        protected bool powerStatus = false;
+        protected string name;
 
-        public void PowerOn()
+        public Robot(string name)
         {
-            powerStatus = true;
-            Console.WriteLine("{0}は、起動した!!", name);
+            this.name = name;
         }
 
-        public void PowerOff()
-        {
-            powerStatus = false;
-            Console.WriteLine("{0}は、停止した...", name);
-        }
+        //public void PowerOn()
+        //{
+        //    powerStatus = true;
+        //    Console.WriteLine("{0}は、起動した!!", name);
+        //}
+
+        //public void PowerOff()
+        //{
+        //    powerStatus = false;
+        //    Console.WriteLine("{0}は、停止した...", name);
+        //}
 
         public string GetName()
         {
             return name;
         }
 
-        public bool GetPowerStatus()
+        public virtual void Attack()
         {
-            return powerStatus;
+            Console.WriteLine("{0}は、攻撃した！", name);
         }
+
+        //public bool GetPowerStatus()
+        //{
+        //    return powerStatus;
+        //}
 
 
     }

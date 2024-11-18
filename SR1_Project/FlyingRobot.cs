@@ -9,21 +9,15 @@ namespace SR1_Project
     internal class FlyingRobot : Robot
     {
 
-        public FlyingRobot(string name)
+        public FlyingRobot(string name) : base(name)
         {
-            this.name = name;
         }
 
-        public void DropBomd()
+        public override void Attack()
         {
-            if (powerStatus)
-            {
-                Console.WriteLine("{0}は、爆弾を落とした!!", name);
-            }
-            else
-            {
-                Console.WriteLine("{0}は、電源OFFなので爆弾投下は使えません...", name);
-            }
+
+            Console.WriteLine("{0}は、爆弾を落とした!!", name);
+
         }
     }
 }
