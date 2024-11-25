@@ -11,26 +11,42 @@ namespace SR1_Project
         static void Main(string[] args)
         {
 
-            FlyingRobot Robot = new FlyingRobot("ロボット");
+            List<int> numbers = new List<int>();
 
-            Console.WriteLine("名前 : {0}", Robot.GetName());
+            numbers.Add(3);
 
-            Robot.Attack();
+            foreach (int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
 
-            FlyingRobot flyingRobot = new FlyingRobot("空飛ぶロボ");
-
-            Console.WriteLine("名前:{0}", flyingRobot.GetName());
-
-            flyingRobot.Attack();
-
-            TankRobot tankRobot = new TankRobot("タンクロボ");
-
-            Console.WriteLine("名前 : {0}", tankRobot.GetName());
-
-            tankRobot.Attack();
-
+            Console.WriteLine("---");
 
             Console.ReadLine();
+
+            numbers.Add(7);
+            numbers.Add(2);
+            numbers.Add(1);
+            numbers.Add(5);
+
+            foreach (int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
+
+            Console.WriteLine("---");
+
+            Console.ReadLine();
+
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+
+            Console.WriteLine("---");
+
+            Console.ReadLine();
+
         }
     }
 }
