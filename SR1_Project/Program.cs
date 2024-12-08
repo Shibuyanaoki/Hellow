@@ -17,21 +17,26 @@ namespace SR1_Project
 
             Random random = new Random(Environment.TickCount);
 
-            for(int i = 0; i< 15; i++)
+            List<Robot> robots = new List<Robot>();
+
+            for (int i = 0; i < 15; i++)
             {
-                int r = random.Next(0, 1+1);
+                int r = random.Next(0, 1 + 1);
 
                 if (r == 0)
                 {
-                    tankRobot.Attack();
+                   robots.Add(tankRobot);
                 }
                 else if (r == 1)
                 {
-                    flyingRobot.Attack();
+                   robots.Add(flyingRobot);
                 }
             }
 
-
+            foreach (Robot robot in robots)
+            {
+                robot.Attack();
+            }
 
 
             Console.ReadLine();
