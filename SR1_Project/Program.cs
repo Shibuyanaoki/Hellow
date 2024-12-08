@@ -11,23 +11,27 @@ namespace SR1_Project
         static void Main(string[] args)
         {
 
-            FlyingRobot Robot = new FlyingRobot("ロボット");
+            FlyingRobot flyingRobot = new FlyingRobot("空飛ぶロボット");
 
-            Console.WriteLine("名前 : {0}", Robot.GetName());
+            TankRobot tankRobot = new TankRobot("タンクロボット");
 
-            Robot.Attack();
+            Random random = new Random(Environment.TickCount);
 
-            FlyingRobot flyingRobot = new FlyingRobot("空飛ぶロボ");
+            for(int i = 0; i< 15; i++)
+            {
+                int r = random.Next(0, 1+1);
 
-            Console.WriteLine("名前:{0}", flyingRobot.GetName());
+                if (r == 0)
+                {
+                    tankRobot.Attack();
+                }
+                else if (r == 1)
+                {
+                    flyingRobot.Attack();
+                }
+            }
 
-            flyingRobot.Attack();
 
-            TankRobot tankRobot = new TankRobot("タンクロボ");
-
-            Console.WriteLine("名前 : {0}", tankRobot.GetName());
-
-            tankRobot.Attack();
 
 
             Console.ReadLine();
