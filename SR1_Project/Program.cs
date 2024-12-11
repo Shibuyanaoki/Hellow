@@ -20,7 +20,6 @@ namespace SR1_Project
                 numbers.Add(r);
             }
 
-
             foreach (int number in numbers)
             {
                 Console.WriteLine(number);

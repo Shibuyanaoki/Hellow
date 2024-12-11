@@ -14,19 +14,6 @@ namespace SR1_Project
         {
             this.name = name;
         }
-
-        //public void PowerOn()
-        //{
-        //    powerStatus = true;
-        //    Console.WriteLine("{0}は、起動した!!", name);
-        //}
-
-        //public void PowerOff()
-        //{
-        //    powerStatus = false;
-        //    Console.WriteLine("{0}は、停止した...", name);
-        //}
-
         public string GetName()
         {
             return name;
@@ -36,12 +23,6 @@ namespace SR1_Project
         {
             Console.WriteLine("{0}は、攻撃した！", name);
         }
-
-        //public bool GetPowerStatus()
-        //{
-        //    return powerStatus;
-        //}
-
 
     }
 }
