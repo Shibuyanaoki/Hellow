@@ -11,10 +11,6 @@ namespace SR1_Project
         static void Main(string[] args)
         {
 
-            FlyingRobot flyingRobot = new FlyingRobot("空飛ぶロボット");
-
-            TankRobot tankRobot = new TankRobot("タンクロボット");
-
             Random random = new Random(Environment.TickCount);
 
             List<Robot> robots = new List<Robot>();
@@ -25,11 +21,11 @@ namespace SR1_Project
 
                 if (r == 0)
                 {
-                   robots.Add(tankRobot);
+                    robots.Add(new TankRobot("タンクロボット"));
                 }
                 else if (r == 1)
                 {
-                   robots.Add(flyingRobot);
+                    robots.Add(new FlyingRobot("空飛ぶロボット"));
                 }
             }
 
