@@ -11,9 +11,9 @@ namespace SR1_Project
         static void Main(string[] args)
         {
 
-            Player player_ = new Player(new Item("こん棒"));
+            Item item = new Item("つるはし");
 
-            player_.UseItem();
+            item.Use();
 
             Console.ReadLine();
         }
