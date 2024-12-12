@@ -11,12 +11,10 @@ namespace SR1_Project
         public Item(string name) : base(name)
         {
         }
-
         public void Use()
         {
             Console.WriteLine("{0}を使った", name);
         }
-
 
     }
 }

@@ -8,9 +8,6 @@ namespace SR1_Project
 {
     internal class Player
     {
-        private string name;
-        private int level;
-
         Item item_ = new Item("");
 
         public Player(Item item)
