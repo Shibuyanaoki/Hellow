@@ -38,7 +38,6 @@ namespace SR1_Project
                 robot.Attack();
             }
 
-
             Console.ReadLine();
         }
     }
