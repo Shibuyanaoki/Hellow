@@ -15,38 +15,12 @@ namespace SR1_Project
 
         public Player(Item item)
         {
-
+            item_ = item;
         }
 
         public void UseItem()
         {
             item_.Use();
         }
-
-        //    public void Attck()
-        //    {
-        //        Console.WriteLine("攻撃!!");
-        //    }
-
-        //    public void Defense()
-        //    {
-        //        Console.WriteLine("防御した");
-        //    }
-
-        //    public void LevelUp()
-        //    {
-        //        level++;
-        //    }
-
-        //    public string GetName()
-        //    {
-        //        return name;
-        //    }
-
-        //    public int GetLevel()
-        //    {
-        //        return level;
-        //    }
-
     }
 }
