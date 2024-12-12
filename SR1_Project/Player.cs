@@ -11,36 +11,42 @@ namespace SR1_Project
         private string name;
         private int level;
 
-        public Player(string name, int level)
+        Item item_ = new Item("");
+
+        public Player(Item item)
         {
-            this.name = name;
-            this.level = level;
+
         }
 
-        public void Attck()
+        public void UseItem()
         {
-            Console.WriteLine("攻撃!!");
+            item_.Use();
         }
 
-        public void Defense()
-        {
-            Console.WriteLine("防御した");
-        }
+        //    public void Attck()
+        //    {
+        //        Console.WriteLine("攻撃!!");
+        //    }
 
-        public void LevelUp()
-        {
-            level++;
-        }
+        //    public void Defense()
+        //    {
+        //        Console.WriteLine("防御した");
+        //    }
 
-        public string GetName()
-        {
-            return name;
-        }
+        //    public void LevelUp()
+        //    {
+        //        level++;
+        //    }
 
-        public int GetLevel()
-        {
-            return level;
-        }
+        //    public string GetName()
+        //    {
+        //        return name;
+        //    }
+
+        //    public int GetLevel()
+        //    {
+        //        return level;
+        //    }
 
     }
 }
