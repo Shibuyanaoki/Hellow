@@ -11,33 +11,9 @@ namespace SR1_Project
         static void Main(string[] args)
         {
 
-            FlyingRobot flyingRobot = new FlyingRobot("空飛ぶロボット");
+            Item item = new Item("つるはし");
 
-            TankRobot tankRobot = new TankRobot("タンクロボット");
-
-            Random random = new Random(Environment.TickCount);
-
-            List<Robot> robots = new List<Robot>();
-
-            for (int i = 0; i < 15; i++)
-            {
-                int r = random.Next(0, 1 + 1);
-
-                if (r == 0)
-                {
-                   robots.Add(tankRobot);
-                }
-                else if (r == 1)
-                {
-                   robots.Add(flyingRobot);
-                }
-            }
-
-            foreach (Robot robot in robots)
-            {
-                robot.Attack();
-            }
-
+            item.Use();
 
             Console.ReadLine();
         }
