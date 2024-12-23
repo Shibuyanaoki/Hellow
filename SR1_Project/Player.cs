@@ -8,16 +8,26 @@ namespace SR1_Project
 {
     internal class Player
     {
-        Item item_ = new Item("");
+        //Item item_ = new Item("");
 
-        public Player(Item item)
+        List<Item> items;
+
+        public Player()
         {
-            item_ = item;
+            items = new List<Item>();
+        }
+
+        public void AddItem(Item item)
+        {
+            items.Add(item);
         }
 
         public void UseItem()
         {
-            item_.Use();
+            foreach (Item item in items)
+            {
+                item.Use();
+            }
         }
     }
 }
