@@ -11,13 +11,21 @@ namespace SR1_Project
         static void Main(string[] args)
         {
 
-            Player player_ = new Player();
+            List<Shape> shapes = new List<Shape>();
 
-            player_.AddItem(new Item("つるはし"));
-            player_.AddItem(new Item("巻き物"));
-            player_.AddItem(new Item("ポーション"));
+            shapes.Add(new Circle(10f));
+            shapes.Add(new Rectangle(5, 7));
+            shapes.Add(new Triangle(5, 7));
 
-            player_.UseItem();
+            // 多態性のテスト
+            foreach (Shape shape in shapes)
+            {
+                // Drawメソッドのテスト
+                shape.Draw();
+
+                // Areaメソッドのテスト
+                Console.WriteLine("面積:{0}", shape.Area());
+            }
 
             Console.ReadLine();
         }
